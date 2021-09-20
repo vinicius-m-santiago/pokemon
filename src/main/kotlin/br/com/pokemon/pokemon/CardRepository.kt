@@ -23,4 +23,9 @@ object CardRepository {
 
     }
 
-}
+    fun getCardList(): Card?{
+         val call = service.getCardList()
+         return call.execute().body()
+        }
+    }
+

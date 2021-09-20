@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import javax.validation.constraints.NotNull
 
 data class Card(
-    val `data`: Data
+    val `data`: List<Data>
 )
 
 data class Data(

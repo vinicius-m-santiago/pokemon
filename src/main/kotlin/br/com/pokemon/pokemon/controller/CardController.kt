@@ -13,6 +13,5 @@ class CardController {
     @GetMapping("/{id}")
     fun buscarPorCard(@PathVariable id: String): Card? {
         return getCard(id)
-
     }
 }

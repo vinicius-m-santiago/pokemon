@@ -3,6 +3,7 @@ package br.com.pokemon.pokemon.controller
 
 import br.com.pokemon.pokemon.CardRepository
 import br.com.pokemon.pokemon.CardRepository.getCard
+import br.com.pokemon.pokemon.CardRepository.getCardList
 import br.com.pokemon.pokemon.PokemonRepository.getPokemon
 import br.com.pokemon.pokemon.model.Card
 import br.com.pokemon.pokemon.model.Pokemon
@@ -23,6 +24,11 @@ class PokemonController {
     @GetMapping("/card/{id}")
     fun buscarPorCard(@PathVariable @Valid id: String): Card? {
         return getCard(id)
+    }
+
+    @GetMapping("/cards")
+    fun buscarTodosCards(): Card? {
+        return getCardList()
     }
 
 

@@ -10,4 +10,7 @@ interface CardService {
     @GET("cards/{id}")
   fun getCard(@Path("id")id: String): Call<Card>
 
+    @GET("cards")
+    fun getCardList(): Call<Card>
+
 }
