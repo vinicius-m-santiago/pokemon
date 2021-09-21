@@ -6,7 +6,5 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface PokemonService {
-
-      @GET("pokemon/{id}")
-      fun getPokemon(@Path("id")id: Int = 1): Call<Pokemon>
+    fun getPokemon(id: Int): Pokemon?
 }
